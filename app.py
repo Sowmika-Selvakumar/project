@@ -16,14 +16,6 @@ from fastapi.responses import JSONResponse
 import uvicorn
 import traceback
 from dotenv import load_dotenv
-from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get("/")
-def read_root():
-    return {"message": "TDS Virtual TA is running!"}
-
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -31,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 # Constants
 DB_PATH = "knowledge_base.db"
-SIMILARITY_THRESHOLD = 0.68  # Lowered threshold for better recall
+SIMILARITY_THRESHOLD = 0.50  # Lowered threshold for better recall
 MAX_RESULTS = 10  # Increased to get more context
 load_dotenv()
 MAX_CONTEXT_CHUNKS = 4  # Increased number of chunks per source
@@ -733,4 +725,5 @@ async def health_check():
         )
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True) 
+    import uvicorn
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)

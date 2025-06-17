@@ -1,13 +1,10 @@
-# Ignore directories
+__pycache__/
+env/
+*.db
+*.pyc
+*.pyo
+*.pyd
+.Python
+.DS_Store
 downloaded_threads/
 markdown_files/
-__pycache__/
-venv/
-.venv/
-# .env file example
-API_KEY=eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjIwMDI4MjBAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.SicKVVEy1wy7hVCDyAJjNdo11lOvZ_9cCIXRrIaN3EE
-# Ignore files
-.env
-preprocess.py
-*.pyc
-.DS_Store
