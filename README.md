@@ -142,8 +142,4 @@ This project is licensed under the [MIT License](LICENSE).
 Student, SRMIST Ramapuram & IIT Madras BS DS Program
 [GitHub Profile](https://github.com/Sowmika-Selvakumar)
 
-```
-
----
-
 
